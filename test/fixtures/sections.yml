@@ -1,0 +1,126 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+section_one:
+  name: 01
+  location: library
+  max_seats: 99
+
+section_two:
+  name: 02
+  location: library
+  max_seats: 99
+    
+section_three:
+  name: 03
+  location: library
+  max_seats: 99
+    
+section_four:
+  name: 04
+  location: library    
+  max_seats: 99
+    
+section_five:
+  name: 05
+  location: library
+  max_seats: 99
+  
+section_six:
+  name: 06
+  location: library
+  max_seats: 99
+    
+section_seven:
+  name: 07
+  location: library
+  max_seats: 99
+  
+section_eight:
+  name: 08
+  location: library    
+  max_seats: 99
+  
+section_nine:
+  name: 09
+  location: library
+  max_seats: 99
+  
+section_ten:
+  name: 10
+  location: library
+  max_seats: 99
+    
+section_eleven:
+  name: 11
+  location: library
+  max_seats: 99
+    
+section_twelve:
+  name: 12
+  location: library        
+  max_seats: 99
+    
+section_13:
+  name: 13
+  location: library
+  max_seats: 99
+  
+section_14:
+  name: 14
+  location: library
+  max_seats: 99
+    
+section_15:
+  name: 15
+  location: library
+  max_seats: 99
+    
+section_16:
+  name: 16
+  location: library    
+  max_seats: 99
+    
+section_17:
+  name: 17
+  location: library
+  max_seats: 99
+  
+section_18:
+  name: 18
+  location: library
+  max_seats: 99
+    
+section_19:
+  name: 19
+  location: library
+  max_seats: 99
+    
+section_20:
+  name: 20
+  location: library    
+  max_seats: 99
+  
+section_21:
+  name: 21
+  location: library
+  max_seats: 99
+  
+section_22:
+  name: RSVP (outer)
+  location: library
+  max_seats: 99
+  
+section_23:
+  name: RSVP (center)
+  location: library
+  max_seats: 99
+    
+section_24:
+  name: FAC. (outer)
+  location: library        
+  max_seats: 99
+    
+section_25:
+  name: FAC. (center)
+  location: library
+  max_seats: 99

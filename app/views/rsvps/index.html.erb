@@ -1,0 +1,34 @@
+
+<div id="list">
+	<div id="list_hd">
+		<h1>Admin Console</h1>
+		<%= link_to 'Export to CSV', :controller => 'exports', :action => 'index' %>
+		<p>Here are the first 50 RSVP's.  You may export all RSVP's into a CSV (comma-separated values) file using the link on the right.</p>
+	</div>
+
+	<table>
+	  <tr>
+	    <th>Student<br/> (GGC Username)</th>
+	    <th>Section</th>
+	    <th>Shirt size</th>	    
+	  </tr>
+	<% @rsvps.sort! {|a,b| a.section.name <=> b.section.name} %>
+	<% @rsvps.each do |rsvp| %>
+		
+	  <tr>
+	    <td>
+	    	<%if !rsvp.user==nil?%>
+	    		<%=h rsvp.user.username%>
+	    	<%end%>
+	    </td>
+	    <td><%=h rsvp.section.name %></td>
+	    <td>
+	    	<%=h rsvp.shirt_size%>
+	    </td>	    
+	  </tr>
+	<% end %>
+	</table>
+	
+	<br />
+	
+</div>

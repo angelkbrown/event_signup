@@ -1,0 +1,19 @@
+<div id="form">
+	<% form_for(@rsvp) do |f| %>
+	  <%= f.error_messages %>
+
+	  <h2>Thank you for your RSVP, <%= @rsvp.user.username %>!</h2>
+
+	  <div class="text">
+		<label for="rsvp[shirt_size]"><b>Your shirt size:</b> <%=h @rsvp.shirt_size %></label>
+	  </div>
+
+	  <div class="text">
+		<label for="rsvp[section]"><b>Your seating section:</b> <%=h @rsvp.section.name %></label>
+	  </div>
+	  
+	<% end %>
+</div>
+<div id="seating_chart">
+	<%= image_tag "seating.jpg", :alt => "seating chart" %>
+</div>

@@ -1,0 +1,4 @@
+.svn*
+.svn/*
+config/database.yml
+app/controllers/application_controller_orig.rb

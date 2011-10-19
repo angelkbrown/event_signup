@@ -1,0 +1,40 @@
+<div id="form">
+	<% form_for(@rsvp) do |f| %>
+	  <%= f.error_messages %>
+
+	  <h2>Welcome, <%= @rsvp.user.username %>!</h2>
+	    <%= f.collection_select :user_id, User.find(:all, :conditions => ["username = ?", @rsvp.user.username]), :id, :username, {:style => "display:hidden;"} %>
+	  <p>Please confirm that you will attend Convocation 2010!</p>	
+	  <div class="input select">
+	    <label for="rsvp[shirt_size]">Choose a shirt size:</label>
+		<select name="rsvp[shirt_size]">
+			<option value="S" selected="true">S</option>
+			<option value="M">M</option>
+			<option value="L">L</option>
+			<option value="XL">XL</option>								
+		</select>
+	  </div>
+
+	  <div class="input select">
+		<label for="section">What section would you like to sit in?</label>
+		<select name="rsvp[section_id]">
+			<% Section.find(:all, :order => "name").each do |section| %>
+				<% if section.hasSeatsAvailable %>
+					<option value="<%= section.id %>"><%= section.name %></option>
+				<% end %>
+			<%end %>
+		</select>	  
+
+	  </div>
+	  <div style="display:none;">
+		You are confirming RSVP for:
+	    <%= f.collection_select :event_id, Event.all, :id, :name %>
+	  </div>
+	  <div class="input button">
+	    <%= f.submit 'Confirm' %>
+	  </div>
+	<% end %>
+</div>
+<div id="seating_chart">
+	<%= image_tag "seating.jpg", :alt => "seating chart" %>
+</div>
